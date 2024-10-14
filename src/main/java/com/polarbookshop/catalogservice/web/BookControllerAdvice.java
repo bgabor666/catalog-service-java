@@ -23,7 +23,7 @@ public class BookControllerAdvice {
 
     @ExceptionHandler(BookAlreadyExistsException.class)
     @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
-    public String bookAlreadyExixtsHandler(BookAlreadyExistsException ex) {
+    public String bookAlreadyExistsHandler(BookAlreadyExistsException ex) {
         return ex.getMessage();
     }
 
