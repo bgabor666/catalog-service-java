@@ -22,7 +22,7 @@ class BookValidationTests {
 
     @Test
     void whenAllFieldsCorrectThenValidationSucceeds() {
-        var book = new Book(
+        var book = Book.of(
             "1234567890",
             "Title",
             "Author",
@@ -35,7 +35,7 @@ class BookValidationTests {
 
     @Test
     void whenIsbnDefinedButIncorrectThenValidationFails() {
-        var book = new Book(
+        var book = Book.of(
             "a234567890",
             "Title",
             "Author",
